@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tip Time</string>
+    <string name="preco">Preço do Serviço</string>
+    <string name="servico_pergunta">Como foi o serviço?</string>
+    <string name="vinte">Incrível (20%)</string>
+    <string name="dezoito">Boa (18%)</string>
+    <string name="quinze">Regular (15%)</string>
+    <string name="gorjeta_ativo">Arredondar gorjeta?</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado_da_gorjeta">Valor da gorjeta</string>
+</resources>
