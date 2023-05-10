@@ -11,9 +11,13 @@
         android:id="@+id/preco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Preço do Serviço"
-        android:inputType="numberDecimal"
+        android:hint="Cusro do serviço"
+            android:inputType="numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,67 +25,77 @@
         android:id="@+id/servico_pergunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como foi o serviço?"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Como era o serviço?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preco" />
 
     <RadioGroup
-        android:id="@+id/gorjeta_opicao"
-        android:layout_width="151dp"
-        android:layout_height="0dp"
+        android:id="@+id/tipOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/servico_pergunta">
 
         <RadioButton
             android:id="@+id/vinte"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Incrível (20%)" />
+            android:text="Incrivel (20%)" />
 
         <RadioButton
             android:id="@+id/dezoito"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Boa (18%)" />
+            android:text="Bom (18%)" />
 
         <RadioButton
             android:id="@+id/quinze"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Regular (15%)" />
+            android:text="Regular (15)" />
+
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/gorjeta_ativo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Arredondar gorjeta?"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gorjeta_opicao" />
-
     <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
+        android:id="@+id/gorjeta_ativo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:text="Arredondar Gorjeta?"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gorjeta_opicao" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipOptions"
+        tools:ignore="UseSwitchCompatOrMaterialXml,VisualLintButtonSize" />
 
     <Button
         android:id="@+id/calcular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calcular"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/calcular"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gorjeta_ativo" />
+        app:layout_constraintTop_toBottomOf="@+id/gorjeta_ativo"
+        tools:ignore="VisualLintButtonSize" />
 
     <TextView
-        android:id="@+id/resultado_da_gorjeta"
+        android:id="@+id/resultadoDaGorjeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor da gorjeta"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Quantidade de Gorjeta: R$5 "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calcular" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
